@@ -9,5 +9,8 @@ class Media < ApplicationRecord
 
   validates :price,
     presence: true
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
 end
