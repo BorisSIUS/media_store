@@ -1,12 +1,11 @@
 class Media < ApplicationRecord
   validates :title,
     presence: true,
-    uniqueness: true,   
-    length: { in: 3..10 }
+    uniqueness: true 
+    
 
   validates :description,
-    presence: true,
-    length: { in: 10..500 }
+    presence: true
 
   validates :price,
     presence: true
