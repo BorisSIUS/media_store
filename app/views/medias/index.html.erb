@@ -1,2 +1,39 @@
-<h1>Medias#index</h1>
-<p>Find me in app/views/medias/index.html.erb</p>
+<h1>w a t e r l e m o n | a g e n c y</h1>
+<p>presents you</p>
+
+
+<div style="display: flex; flex-wrap: wrap; justify-content: space-around; margin: 30px;">
+
+	<% @medias.each do |media| %>
+
+		<div class="card" style="width: 300px; margin: 15px; padding: 0px;">
+
+			<div class="card-img-top">
+
+				<a href="<%= media_path(media.id)%>">
+				<img src="<%= media.url %>" style="width: 100%; height: auto; border-top-left-radius: 5px; border-top-right-radius: 5px;">
+			</a>
+
+			</div>
+
+			<div class="card-footer" style="display: flex; flex-direction: row; justify-content: space-between;">
+
+				<div >
+
+					<%= media.title %>
+						
+				</div>
+
+				<div>
+					
+				$	<%= media.price %>
+						
+				</div>
+
+			</div>
+
+		</div>
+
+	<% end %>
+
+</div>
