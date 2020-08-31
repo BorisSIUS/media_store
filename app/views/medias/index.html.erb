@@ -2,15 +2,17 @@
 <p>presents you</p>
 
 
-<div style="display: flex; flex-wrap: wrap; justify-content: space-around;">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-around; margin: 30px;">
 
 	<% @medias.each do |media| %>
 
-		<div class="card" style="width: 300px;">
+		<div class="card" style="width: 300px; margin: 15px;">
 
 			<div class="card-body">
 
+				<a href="<%= media_path(media.id)%>">
 				<img src="<%= media.url %>" style="width: 100%; height: auto;">
+			</a>
 
 			</div>
 
