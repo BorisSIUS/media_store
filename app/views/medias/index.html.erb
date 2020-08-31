@@ -6,12 +6,12 @@
 
 	<% @medias.each do |media| %>
 
-		<div class="card" style="width: 300px; margin: 15px;">
+		<div class="card" style="width: 300px; margin: 15px; padding: 0px;">
 
-			<div class="card-body">
+			<div class="card-img-top">
 
 				<a href="<%= media_path(media.id)%>">
-				<img src="<%= media.url %>" style="width: 100%; height: auto;">
+				<img src="<%= media.url %>" style="width: 100%; height: auto; border-top-left-radius: 5px; border-top-right-radius: 5px;">
 			</a>
 
 			</div>
