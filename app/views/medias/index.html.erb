@@ -2,33 +2,36 @@
 <p>presents you</p>
 
 
-<% @medias.each do |media| %>
+<div style="display: flex; flex-wrap: wrap; justify-content: space-around;">
 
-	<div class="card">
+	<% @medias.each do |media| %>
 
-		<div class="card-body">
+		<div class="card" style="width: 300px;">
 
-			<img src="<%= media.image_url %>">
+			<div class="card-body">
+
+				<img src="<%= media.url %>" style="width: 100%; height: auto;">
+
+			</div>
+
+			<div class="card-footer" style="display: flex; flex-direction: row; justify-content: space-between;">
+
+				<div >
+
+					<%= media.title %>
+						
+				</div>
+
+				<div>
+					
+				$	<%= media.price %>
+						
+				</div>
+
+			</div>
 
 		</div>
 
-		<div class="card-footer" style="display: flex; flex-direction: row; justify-content: space-between;">
+	<% end %>
 
-			<div >
-
-				<%= media.title %>
-					
-			</div>
-
-			<div>
-				
-			$	<%= media.price %>
-					
-			</div>
-
-		</div>
-
-	</div>
-
-<% end %>
-
+</div>
