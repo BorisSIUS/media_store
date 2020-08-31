@@ -7,6 +7,7 @@ class MediasController < ApplicationController
   end
 
   def show
+    @media = Media.find(params[:id])
   end
 
   def new

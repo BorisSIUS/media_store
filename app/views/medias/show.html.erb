@@ -1,2 +1,17 @@
-<h1>Medias#show</h1>
-<p>Find me in app/views/medias/show.html.erb</p>
+
+
+<ul class="breadcrumb">
+  <li><%= link_to "Home", root_path %></li>
+  <li><%=@media.title%></li>
+</ul>
+
+<div class="container-flex">
+    <div id="column_1"> <%= image_tag (@media.url)%> </div>
+    <div id="column_2">
+        <h1> <%=@media.title%> </h1>
+        <p> <%=@media.description%> </p>
+        <div class="bottom-right"><%=@media.price%></div>
+        <a href="#" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Acheter maintenant</a>
+    </div>    
+</div>
+
