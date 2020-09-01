@@ -9,6 +9,8 @@ class User < ApplicationRecord
 
   has_one :cart
 
+  has_many :orders
+
   def plug_cart
     Cart.create(user_id: self.id)
   end
