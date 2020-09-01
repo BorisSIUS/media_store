@@ -12,4 +12,7 @@ class Media < ApplicationRecord
 
   has_many :addings
   has_many :carts, through: :addings
+
+  has_many :order_media_relations
+  has_many :orders, through: :order_media_relations
 end
