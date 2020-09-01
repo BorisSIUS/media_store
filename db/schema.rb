@@ -10,16 +10,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_31_164006) do
+ActiveRecord::Schema.define(version: 2020_09_01_120901) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "carts", force: :cascade do |t|
-    t.bigint "user_id"
+  create_table "addings", force: :cascade do |t|
+    t.bigint "cart_id"
+    t.bigint "media_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_carts_on_user_id", unique: true
+    t.index ["cart_id"], name: "index_addings_on_cart_id"
+    t.index ["media_id"], name: "index_addings_on_media_id"
+  end
+
+  create_table "join_carts_medias", force: :cascade do |t|
+    t.bigint "cart_id"
+    t.bigint "media_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["cart_id"], name: "index_join_carts_medias_on_cart_id"
+    t.index ["media_id"], name: "index_join_carts_medias_on_media_id"
   end
 
   create_table "join_carts_medias", force: :cascade do |t|
@@ -52,5 +63,4 @@ ActiveRecord::Schema.define(version: 2020_08_31_164006) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "carts", "users"
 end
