@@ -11,7 +11,7 @@
         <div class="price"><%=@media.price%> € </div>
 
         <% if current_user %>
-        <a href="<%= media_cart_path(@media.id, current_user.cart.id)%>" method="put" class="btn-primary"> Ajouter au panier </a>
+        <a href="<%= media_cart_path(@media.id, current_user.cart.id)%>" class="btn-primary" data-method="patch"> Ajouter au panier </a>
         <% else %>
         <p> Connectez-vous pour acheter cette photo de chat. </p>
         <a href="<%= user_session_path %>" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Me connecter</a>
