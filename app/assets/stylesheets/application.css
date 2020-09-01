@@ -14,13 +14,13 @@
  *= require_self
  */
 
- .navbar {
+ /*.navbar {
     min-height: 180px;
- }
+ }*/
 
  .navbar-brand {
     padding: 0 15px;
-    height: 180px;
+    /* height: 180px; */
     line-height: 80px;
   }
 
