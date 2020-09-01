@@ -11,5 +11,5 @@ class Media < ApplicationRecord
     presence: true
 
   has_many :join_carts_medias
-  has_many :cart, through: :join_carts_medias
+  has_many :carts, through: :join_carts_medias
 end

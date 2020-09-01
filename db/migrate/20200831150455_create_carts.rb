@@ -6,6 +6,5 @@ class CreateCarts < ActiveRecord::Migration[5.2]
     end
   end
   def change
-    add_reference :user, :cart, index: { unique: true }, foreign_key: true
   end
 end
