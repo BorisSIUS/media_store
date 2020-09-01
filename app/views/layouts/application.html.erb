@@ -18,7 +18,6 @@
 
     <div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center;"><a class="navbar-brand" href="<%= root_path %>">w a t e r l e m o n | c a t s</a>
 
-
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -29,11 +28,19 @@
                 <li class="nav-item">
                     <%= link_to "Se déconnecter", destroy_user_session_path, method: :delete, style: "color: white;" %>
                 </li>
+
+                <li class="cart">
+                 <%= link_to "cart", cart_path(current_user.cart.id), style: "color: white;" %>
+                </li>
+
               <% else %>
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Mon compte
                   </a>
+
+                  
+
                   <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <%= link_to "Connexion ", new_user_session_path, class: "dropdown-item" %>
                     <%= link_to "Inscription", new_user_registration_path, class: "dropdown-item" %>
