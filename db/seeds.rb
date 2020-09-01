@@ -6,6 +6,10 @@ cat_pics = [ "https://cloudfront-eu-central-1.images.arcpublishing.com/prisa/IPZ
     Media.create(title: Faker::Creature::Cat.breed , description: Faker::Lorem.sentence(word_count: 14, supplemental: true, random_words_to_add: 7) , price: Faker::Number.decimal(l_digits: 2) , url: cat_pics.sample)
 end
 
+10.times do
+    User.create(email: Faker::Name.first_name + "@yopmail.com", password: "123123")
+end
+
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
 #

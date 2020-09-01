@@ -10,6 +10,6 @@ class Media < ApplicationRecord
   validates :price,
     presence: true
 
-  has_many :join_carts_medias
-  has_many :carts, through: :join_carts_medias
+  has_many :addings
+  has_many :carts, through: :addings
 end
