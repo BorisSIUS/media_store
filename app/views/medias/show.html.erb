@@ -8,18 +8,13 @@
     <div id="column_2">
         <h1> <%=@media.title%> </h1>
         <p> <%=@media.description%> </p>
-<<<<<<< HEAD
-        <div class="bottom-right"><%=@media.price%></div>
-        <button class="btn btn-primary btn-lg active" role="button" aria-pressed="true"> href="<%= media_cart_path(@media.id, current_user.cart_id)%>" method="put", class="btn-primary"> Ajouter au panier </button>
-=======
         <div class="price"><%=@media.price%> € </div>
 
         <% if current_user %>
-        <a href="#" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Ajouter à mon panier</a>
+        <a href="<%= media_cart_path(@media.id, current_user.cart_id)%>" method="put" class="btn-primary"> Ajouter au panier </a>
         <% else %>
         <p> Connectez-vous pour acheter cette photo de chat. </p>
-        <a href="#" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Me connecter</a>
+        <a href="<%= new_user_registration_path %>" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Me connecter</a>
         <% end %>
->>>>>>> eb537b8bebfb60d4a905c30539ca5f694c8fca29
     </div>    
 </div>
