@@ -81,5 +81,5 @@ test:
 production:
   <<: *default
   database: store_production
-  username: alfoldi
+  username: <%= ENV['POSTRGES_USERNAME'] %>
   password: <%= ENV['STORE_DATABASE_PASSWORD'] %>
