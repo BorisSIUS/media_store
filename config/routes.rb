@@ -5,6 +5,9 @@ Rails.application.routes.draw do
   root 'medias#index'
 
   resources :medias
-  
+  resources :medias do 
+    resources :carts
+  end
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
