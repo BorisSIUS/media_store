@@ -10,8 +10,14 @@
     <div id="column_2">
         <h1> <%=@media.title%> </h1>
         <p> <%=@media.description%> </p>
-        <div class="bottom-right"><%=@media.price%></div>
-        <a href="#" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Acheter maintenant</a>
+        <div class="price"><%=@media.price%> € </div>
+
+        <% if current_user %>
+        <a href="#" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Ajouter à mon panier</a>
+        <% else %>
+        <p> Connectez-vous pour acheter cette photo de chat. </p>
+        <a href="#" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Me connecter</a>
+        <% end %>
     </div>    
 </div>
 
