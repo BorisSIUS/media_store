@@ -52,15 +52,6 @@ ActiveRecord::Schema.define(version: 2020_09_01_170715) do
     t.index ["user_id"], name: "index_carts_on_user_id", unique: true
   end
 
-  create_table "join_carts_medias", force: :cascade do |t|
-    t.bigint "cart_id"
-    t.bigint "media_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["cart_id"], name: "index_join_carts_medias_on_cart_id"
-    t.index ["media_id"], name: "index_join_carts_medias_on_media_id"
-  end
-
   create_table "media", force: :cascade do |t|
     t.string "title"
     t.text "description"
