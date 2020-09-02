@@ -38,6 +38,7 @@
     background-color: #d9eee8;
  }
 
-.cart-icon {
-   background-color: #d9eee8;
-}
+ .nav-item {
+    margin-right: 15px;
+    margin-left: 15px;
+ }

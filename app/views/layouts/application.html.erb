@@ -25,12 +25,17 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
               <% if user_signed_in? %>
-                <li class="nav-item">
-                    <%= link_to "Se déconnecter", destroy_user_session_path, method: :delete, style: "color: white;" %>
+              
+                <li class="nav-item connected">
+                 <%= link_to "Mon panier", cart_path(current_user.cart.id), style: "color: white;" %>
                 </li>
 
-                <li class="cart">
-                 <%= link_to "cart", cart_path(current_user.cart.id), style: "color: white;" %>
+                <li class="nav-item connected">
+                 <%= link_to "Mon profil", cart_path(current_user.cart.id), style: "color: white;" %>
+                </li>
+
+                  <li class="nav-item connected">
+                    <%= link_to "Se déconnecter", destroy_user_session_path, method: :delete, style: "color: white;" %>
                 </li>
 
               <% else %>

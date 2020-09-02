@@ -10,7 +10,7 @@ class OrdersController < ApplicationController
 
    	order.medias << media
 
-   end
+  end
 
    Adding.where(cart: cart).each.delete
 
