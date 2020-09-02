@@ -4,7 +4,7 @@
 </ul>
 
 <div class="container-flex">
-    <div id="column_1"> <%= image_tag (@media.url)%> </div>
+    <div id="column_1"> <%= image_tag @media.picture, alt: 'picture'%> </div>
     <div id="column_2">
         <h1> <%=@media.title%> </h1>
         <p> <%=@media.description%> </p>
