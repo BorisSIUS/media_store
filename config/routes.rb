@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'profilpages/new'
+  get 'profilpages/create'
   devise_for :users
 
   root 'medias#index'
