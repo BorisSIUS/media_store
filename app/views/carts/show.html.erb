@@ -1,7 +1,6 @@
 <h1> Votre panier </h1>
 
 <div class="row">
-<<<<<<< HEAD
     <div class="col-sm-12 col-sm-12 col-md-offset-1">
         <table class="table table-hover">
             <thead>
@@ -32,38 +31,6 @@
                     </button></td>
                 </tr>
             <%end%>
-=======
-<div class="col-sm-12 col-md-10 col-md-offset-1">
-    <table class="table table-hover">
-        <thead>
-            <tr>
-                <th>Produit</th>
-                <th class="text-center">Prix</th>
-                <th class="text-center">Total</th>
-                <th> </th>
-            </tr>
-        </thead>
-        <tbody>
-            
-        <% @cart.medias.each do |i| %> 
-            <tr>
-                <td class="col-md-6">
-                <div class="media">
-                <div class="image_thumbnail"><%= image_tag i.picture, alt: 'picture', class: "border rounded"%> </div>
-                    <div class="media-body">
-                        <h4 class="media-heading"><a href="#"><%=i.title%></a></h4>
-                        <p> <b>Description</b> : <%=i.description%></p>
-                        <span>Status: </span><span class="text-warning"><strong>Leaves warehouse in 2 - 3 days</strong></span>
-                    </div>
-                </div></td>
-                <td class="col-md-1 text-center"><strong><%=i.price%></strong></td>
-                <td class="col-md-1">
-                <button type="button" class="btn btn-danger">
-                    <span class="glyphicon glyphicon-remove"></span> Enlever
-                </button></td>
-            </tr>
-        <%end%>
->>>>>>> master
 
                 <tr>
 
