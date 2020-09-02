@@ -37,3 +37,8 @@
 .background-light-blue {
     background-color: #d9eee8;
  }
+
+ .nav-item {
+    margin-right: 15px;
+    margin-left: 15px;
+ }
