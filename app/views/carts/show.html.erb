@@ -17,7 +17,7 @@
             <tr>
                 <td class="col-md-6">
                 <div class="media">
-                <div class="image_thumbnail"> <%= image_tag (i.url)%> </div>
+                <div class="image_thumbnail"><%= image_tag i.picture, alt: 'picture', class: "border rounded"%> </div>
                     <div class="media-body">
                         <h4 class="media-heading"><a href="#"><%=i.title%></a></h4>
                         <p> <b>Description</b> : <%=i.description%></p>
