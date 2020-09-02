@@ -21,7 +21,7 @@
                         <div class="media-body">
                             <h4 class="media-heading"><a href="#"><%=i.title%></a></h4>
                             <p> <b>Description</b> : <%=i.description%></p>
-                            <span>Status: </span><span class="text-warning"><strong>Leaves warehouse in 2 - 3 days</strong></span>
+                           <!-- <span>Status: </span><span class="text-warning"><strong>Leaves warehouse in 2 - 3 days</strong></span> -->
                         </div>
                     </div></td>
                     <td class="col-md-1 text-center"><strong><%=i.price%></strong></td>
@@ -42,17 +42,17 @@
                     <%=sum%>
                     </h5></td>
                 </tr>
-                <tr>
+                <!--<tr>
 
                     <td>   </td>
                     <td><h5>Frais de livraison  </h5></td>
                     <td class="text-right"><h5><strong>$6.94</strong></h5></td>
-                </tr>
+                </tr>-->
                 <tr>
 
                     <td>   </td>
                     <td><h3>Total</h3></td>
-                    <td class="text-right"><h3><strong><%=sum+6.94%></strong></h3></td>
+                    <td class="text-right"><h3><strong><%=sum%></strong></h3></td> <!-- +6.94 if delivery fee -->
                 </tr>
                 <tr>
 
@@ -60,7 +60,8 @@
                     <td>   </td>
                     <td>
                     <button type="button" class="btn btn-success">
-                        Payer <span class="glyphicon glyphicon-play"></span>
+                        <%= link_to 'Place Order', orders_path, method: 'post' %> 
+                        <span class="glyphicon glyphicon-play"></span>
                     </button></td>
                 </tr>
             </tbody>
