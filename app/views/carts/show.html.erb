@@ -1,10 +1,69 @@
-<<<<<<< HEAD
+<h1> Votre panier </h1>
 
-<h1>Mon panier</h1>
+<div class="row">
+    <div class="col-sm-12 col-sm-12 col-md-offset-1">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Produit</th>
+                    <th class="text-center">Prix</th>
+                    <th class="text-center">Total</th>
+                    <th> </th>
+                </tr>
+            </thead>
+            <tbody>
+                
+            <% @cart.medias.each do |i| %> 
+                <tr>
+                    <td class="col-md-6">
+                    <div class="media">
+                    <div class="image_thumbnail"><%= image_tag i.picture, alt: 'picture', class: "border rounded"%> </div>
+                        <div class="media-body">
+                            <h4 class="media-heading"><a href="#"><%=i.title%></a></h4>
+                            <p> <b>Description</b> : <%=i.description%></p>
+                            <span>Status: </span><span class="text-warning"><strong>Leaves warehouse in 2 - 3 days</strong></span>
+                        </div>
+                    </div></td>
+                    <td class="col-md-1 text-center"><strong><%=i.price%></strong></td>
+                    <td class="col-md-1">
+                    <button type="button" class="btn btn-danger">
+                        <span class="glyphicon glyphicon-remove"></span> Enlever
+                    </button></td>
+                </tr>
+            <%end%>
 
+                <tr>
 
-<p>Find me in app/views/carts/new.html.erb</p>
-=======
-<h1>Carts#show</h1>
-<p>Find me in app/views/carts/show.html.erb</p>
->>>>>>> da476c4a504d2da84fd81152177d71f05c69e51d
+                    <td>   </td>
+                    <td><h5>Sous-total</h5></td>
+                    <td class="text-right"><h5>
+                    <% sum = 0 %>
+                    <% @cart.medias.each { |i| sum+=i.price } %> 
+                    <%=sum%>
+                    </h5></td>
+                </tr>
+                <tr>
+
+                    <td>   </td>
+                    <td><h5>Frais de livraison  </h5></td>
+                    <td class="text-right"><h5><strong>$6.94</strong></h5></td>
+                </tr>
+                <tr>
+
+                    <td>   </td>
+                    <td><h3>Total</h3></td>
+                    <td class="text-right"><h3><strong><%=sum+6.94%></strong></h3></td>
+                </tr>
+                <tr>
+
+                    <td>   </td>
+                    <td>   </td>
+                    <td>
+                    <button type="button" class="btn btn-success">
+                        Payer <span class="glyphicon glyphicon-play"></span>
+                    </button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
