@@ -6,7 +6,6 @@ Rails.application.routes.draw do
 
   root 'medias#index'
 
-  resources :medias, only: [:show, :index]
   
   resources :medias do 
     resources :carts, only: [:update]

@@ -1,3 +1,8 @@
+<% if current_user && current_user.admin %>
+	<%= link_to "Ajouter de la marchandise", new_media_path, class: 'btn btn-info'%>
+<% end %>
+
+
 <h1> Bienvenue sur w a t e r l e m o n | c a t s ! </h1>
 <h2>Des photos de chats envoyés directement sur votre boite mail</h2>
 <p> Commandez les dès maintenant, le stock est limité! </p>

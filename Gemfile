@@ -71,3 +71,8 @@ gem 'activerecord'
 gem 'table_print'
 gem 'faker'
 gem 'bcrypt'
+
+
+
+gem "google-cloud-storage", "~> 1.11", require: false
+

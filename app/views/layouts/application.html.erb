@@ -5,7 +5,7 @@
     <title>Store</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-    <%= favicon_link_tag asset_path('favicon.ico') %>
+    <%= favicon_link_tag image_path('favicon.ico') %>
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
   </head>
@@ -62,6 +62,12 @@
     <!-- Y I E L D row-->
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
+
+    <% flash.each do |type, msg| %>
+      <div>
+        <%= msg %>
+      </div>
+    <% end %>
     <%= yield %>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
