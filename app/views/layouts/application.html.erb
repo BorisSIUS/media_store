@@ -60,8 +60,13 @@
     <div class="container">
 
     <!-- Y I E L D row-->
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    
+    <p><%= render 'layouts/flash'%></p>
+
+    <!--<p class="notice"><= notice ></p>
+    <p class="alert"><= alert ></p>
+    <p class="success"></p> -->
+
     <%= yield %>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
@@ -99,22 +104,6 @@
           <!-- Grid column -->
           <div class="col-md-2 mb-3">
             <h6 class="text-uppercase font-weight-bold">
-              <a href="#!">Products</a>
-            </h6>
-          </div>
-          <!-- Grid column -->
-    
-          <!-- Grid column -->
-          <div class="col-md-2 mb-3">
-            <h6 class="text-uppercase font-weight-bold">
-              <a href="#!">Awards</a>
-            </h6>
-          </div>
-          <!-- Grid column -->
-    
-          <!-- Grid column -->
-          <div class="col-md-2 mb-3">
-            <h6 class="text-uppercase font-weight-bold">
               <a href="#!">Help</a>
             </h6>
           </div>
@@ -130,11 +119,11 @@
     
         </div>
         <!-- Grid row-->
-        <hr class="rgba-white-light" style="margin: 0 15%;">
+        <hr class="my-1">
     
         <!-- Grid row-->
         <div class="row d-flex text-center justify-content-center mb-md-0 mb-4">
-    
+
           <!-- Grid column -->
           <div class="col-md-8 col-12 mt-5">
             <p style="line-height: 1.7rem">We are believing in a world where everyone has for number one priority to see everyone thrive and be their happy self regardless of how different they are.</p>
