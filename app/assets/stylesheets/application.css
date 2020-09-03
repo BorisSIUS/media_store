@@ -108,7 +108,7 @@ h1 {
  
 /* Flash */
 
-.error, .alert, .info {
+/*.error, .alert, .info {
    border-radius: 3px;
    font-size: 1.2rem;
    margin-bottom: 5px;
@@ -122,7 +122,7 @@ h1 {
    margin-bottom: 5px;
    margin-top: 36px;
    color: rgb(134, 226, 134);
- }
+ }*/
 
  #homepage-price {
     color: #78C2AD;
