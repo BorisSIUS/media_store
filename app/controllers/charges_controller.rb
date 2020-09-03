@@ -27,6 +27,8 @@ class ChargesController < ApplicationController
 
     cart.medias = []
 
+    
+
 
   rescue Stripe::CardError => e
     flash[:error] = e.message
