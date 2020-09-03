@@ -22,6 +22,12 @@ class ChargesController < ApplicationController
     
     cart = current_user.cart
 
+    order = Order.create(user: current_user)
+
+    cart.medias.each do |media|
+      order.medias << media
+    end
+
     OrderMailer.admin_bill_email(current_user).deliver_now
     OrderMailer.user_bill_email(current_user).deliver_now
 
