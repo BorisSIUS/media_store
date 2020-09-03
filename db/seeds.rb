@@ -14,8 +14,20 @@ cat_pics = ["0*mOpFDG1u_8pLUD0p.jpeg", "5e848c4825000056010586d9.jpeg", "1800x12
 end
 
 10.times do
-    User.create(email: Faker::Name.first_name + "@yopmail.com", password: "123123")
+    user = User.create(email: Faker::Name.first_name + "@yopmail.com", password: "123123")
+    2.times do |i|
+    	order = Order.create(user: user)
+
+        all_medias = Media.all
+
+    	3.times do |j|
+    		random_media = all_medias.sample
+    		order.medias << random_media
+    		all_medias = all_medias.select { |media| self != random_media } 
+    	end
+    end
 end
+
 
 User.create(email: "bobo@yopmail.com", password: "123123")
 
