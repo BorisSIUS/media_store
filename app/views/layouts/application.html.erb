@@ -2,7 +2,7 @@
 <html>
   <head>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/minty/bootstrap.min.css" integrity="sha384-H4X+4tKc7b8s4GoMrylmy2ssQYpDHoqzPa9aKXbDwPoPUA3Ra8PA5dGzijN+ePnH" crossorigin="anonymous"> 
-    <title>Store</title>
+    <title>w a t e r l e m o n | c a t s</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= favicon_link_tag image_path('favicon.ico') %>
@@ -13,14 +13,13 @@
   <body>
   <!-- N A V B A R row-->
 
-  <nav class="navbar navbar-expand-lg navbar-dark bg-primary d-flex justify-content-between
-  "style="box-shadow: 0px -2px 42px -15px rgba(0,0,0,0.6);">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary d-flex justify-content-between" style="box-shadow: 0px -2px 42px -15px rgba(0,0,0,0.6);">
 
-    <div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center;"><a class="navbar-brand" href="<%= root_path %>">w a t e r l e m o n | c a t s</a>
+    <!--<div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center;">--><div><a class="navbar-brand" href="<%= root_path %>">w a t e r l e m o n | c a t s</a></div>
 
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+          <div><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
         
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
@@ -52,13 +51,16 @@
                   </div>
                 </li>
               <% end %>
-            </ul>
-          </div></div>
+            </ul></div>
+          <!--</div>-->
+        </div>
     </nav>
 
-    <!-- C O N T A I N E R row-->
-    <div class="container">
 
+    <!-- C O N T A I N E R row-->
+    <div class="w-100" style="margin-top: 95px;">
+
+    
     <!-- Y I E L D row-->
     
     <p><%= render 'layouts/flash'%></p>
@@ -72,6 +74,9 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>  
+
+    <script src="https://kit.fontawesome.com/6085f87352.js" crossorigin="anonymous"></script>
+
     
     </div>
 
@@ -122,12 +127,14 @@
         <hr class="my-1">
     
         <!-- Grid row-->
-        <div class="row d-flex text-center justify-content-center mb-md-0 mb-4">
+        <div class="row d-flex text-center justify-content-center mb-md-0 mb-4 w-100">
 
           <!-- Grid column -->
-          <div class="col-md-8 col-12 mt-5">
-            <p style="line-height: 1.7rem">We are believing in a world where everyone has for number one priority to see everyone thrive and be their happy self regardless of how different they are.</p>
-            <p style="line-height: 1.7rem">Take a part in our heartwarming journey.</p>
+          <div class="col-md-8 col-12 mt-5 w-100">
+            <p style="line-height: 1.7rem">Achetez très cher ce qu'on trouve partout gratuitement est un acte d'une folie furieuse ou d'une poésie folle.</p>
+            <p style="line-height: 1.7rem">Dans les deux cas, vous nous intéressez.</p>
+            <p style="line-height: 1.7rem">Rejoignez-nous.</p>
+
           </div>
           <!-- Grid column -->
     
@@ -139,7 +146,7 @@
           <!-- Grid column -->
           <div class="col-md-12">
     
-            <div class="mb-5 flex-center">
+            <div class="mb-5 flex-center text-center">
     
               <!-- Facebook -->
               <a class="fb-ic">
@@ -182,7 +189,7 @@
       <!-- Copyright -->
               <hr class="rgba-white-light" style="margin: 0 15%;">
 
-      <div class="footer-copyright text-center py-3"> All rights reserved © 2020
+      <div class="footer-copyright text-center py-3"> Tous droits réservés. © 2020
         <a href="">Pas'Tech Crew</a>
       </div>
       <!-- Copyright -->

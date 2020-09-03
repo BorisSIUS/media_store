@@ -2,15 +2,18 @@
 	<%= link_to "Ajouter de la marchandise", new_media_path, class: 'btn btn-info'%>
 <% end %>
 
+<div class="jumbotron jumbotron-fluid" style="background-image: url(https://wallup.net/wp-content/uploads/2016/10/12/330468-fantasy_art-cat-artwork.jpg); height: 100vh;">
+      <div class="container" style="color: white;">
+        <h1 class="display-4" style="color: white;">w a t e r l e m o n | c a t s</h1>
+        <h2 class="lead" style="color: white;">Des photos de chats envoyées directement dans votre boîte mail</h2>
+        <p class="lead">Commandez-les dès maintenant, le stock est limité!</p>
+      </div>
+    </div>
 
-<h1> Bienvenue sur w a t e r l e m o n | c a t s ! </h1>
-<h2>Des photos de chats envoyés directement sur votre boite mail</h2>
-<p> Commandez les dès maintenant, le stock est limité! </p>
-<br>
 <hr class="solid">
 
 
-<div style="display: flex; flex-wrap: wrap; justify-content: space-around; align-items: center; margin: 30px;">
+<div class="container" style="display: flex; flex-wrap: wrap; justify-content: space-around; align-items: center; margin: 30px;">
 
 	<% @medias.each do |media| %>
 
