@@ -15,13 +15,12 @@
                 
             <% @cart.medias.each do |i| %> 
                 <tr>
-                    <td class="col-md-6">
+                  <td class="col-md-6">
                     <div class="media">
-                    <div class="image_thumbnail"><%= image_tag i.picture, alt: 'picture', class: "border rounded"%> </div>
+                      <div class="image_thumbnail"><%= image_tag i.picture, alt: 'picture', class: "border rounded"%> </div>
                         <div class="media-body">
                             <h4 class="media-heading"><a href="#"><%=i.title%></a></h4>
                             <p> <b>Description</b> : <%=i.description%></p>
-                           <!-- <span>Status: </span><span class="text-warning"><strong>Leaves warehouse in 2 - 3 days</strong></span> -->
                         </div>
                     </div></td>
                     <td class="col-md-1 text-center"><strong><%=i.price%></strong></td>
@@ -35,35 +34,28 @@
                     <td class="text-right"><h5>
                     <% sum = 0 %>
                     <% @cart.medias.each { |i| sum+=i.price } %> 
-                    <%=sum%>
+                    <%= sum %>
                     </h5></td>
                 </tr>
-                <!--<tr>
 
-                    <td>   </td>
-                    <td><h5>Frais de livraison  </h5></td>
-                    <td class="text-right"><h5><strong>$6.94</strong></h5></td>
-                </tr>-->
                 <tr>
 
                     <td>   </td>
                     <td><h3>Total</h3></td>
-                    <td class="text-right"><h3><strong><%=sum%></strong></h3></td> <!-- +6.94 if delivery fee -->
-                </tr>
-                <tr>
-
-                    <td>   </td>
-                    <td>   </td>
-                    <td>
-
-                    <!--<button type="button" class="btn btn-success">
-                        <= link_to 'Place Order', orders_path, method: 'post' > <span class="glyphicon glyphicon-play"></span> -->
-
-                    <%= link_to 'Commander', new_charge_path, class: "btn btn-success" %> 
-                    
-                    </button></td>
+                    <td class="text-right"><h3><strong><%=sum%></strong></h3></td>
                 </tr>
             </tbody>
         </table>
+        <div style="display: flex; justify-content: flex-end; margin-right: 50px;">
+                    <% if @cart.medias.length != 0 %>
+
+                        <%= link_to 'Commander', new_charge_path, class: "btn btn-success" %>
+
+                    <% else %>
+
+                        <div class="btn btn-success muted">Commander</div>
+
+                    <% end %>
+        </div>
     </div>
 </div>

@@ -8,6 +8,7 @@ class ChargesController < ApplicationController
     # Amount in cents
 
     @amount = cart_total
+
     customer = Stripe::Customer.create({
       email: params[:stripeEmail],
       source: params[:stripeToken],
@@ -43,7 +44,8 @@ class ChargesController < ApplicationController
 
   def cart_total
     amount = 0
-    current_user.cart.medias.each { |media| amount+=media.price*100 }
+    current_user.cart.medias.each { |media| amount += media.price*100 }
     return amount = amount.to_i
   end
+
 end
