@@ -106,3 +106,30 @@ h1 {
    justify-content: space-around;
  }
  
+/* Flash */
+
+.error, .alert, .info {
+   border-radius: 3px;
+   font-size: 1.2rem;
+   margin-bottom: 5px;
+   margin-top: 36px;
+   color: orange;
+ }
+ 
+ .success, .notice {
+   border-radius: 3px;
+   font-size: 1.2rem;
+   margin-bottom: 5px;
+   margin-top: 36px;
+   color: rgb(134, 226, 134);
+ }
+
+ #homepage-price {
+    color: #78C2AD;
+    font-weight: 700;
+ }
+
+ #homepage-cat-name {
+   font-weight: 500;
+   color: #5A5A5A;
+ }
