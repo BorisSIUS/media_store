@@ -5,12 +5,9 @@ Rails.application.routes.draw do
   devise_for :users
 
   root 'medias#index'
-
-<<<<<<< HEAD
-=======
-  resources :medias, only: [:show, :index], path: 'chatons'
->>>>>>> master
   
+  resources :medias, only: [:show, :index], path: 'chatons'
+
   resources :medias do 
     resources :carts, only: [:update]
   end
