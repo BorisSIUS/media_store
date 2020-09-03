@@ -73,6 +73,4 @@ gem 'faker'
 gem 'bcrypt'
 
 
-
-gem "google-cloud-storage", "~> 1.11", require: false
-
+gem "aws-sdk-s3", require: false

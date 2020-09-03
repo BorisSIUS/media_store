@@ -31,11 +31,11 @@ class MediasController < ApplicationController
         flash[:success] = "Media créé"
         redirect_to medias_path
       else
-        flash[:danger] = @media.errors
+        flash[:error] = @media.errors
         redirect_to new_media
       end
     else
-      flash[:danger] = "media have no file"
+      flash[:error] = "media have no file"
       redirect_to new_media_path
     end
 
@@ -61,7 +61,7 @@ class MediasController < ApplicationController
   private
 
   def post_params
-    post_params = params.require(:media).permit(:title, :description, :price)
+    post_params = params.require(:media).permit(:title, :description, :price, :picture)
   end
 
 end
