@@ -1,4 +1,5 @@
 class MediasController < ApplicationController
+  layout "index", only: [:index]
   before_action :authenticate_admin, only: [:create, :new]
 
   def index
