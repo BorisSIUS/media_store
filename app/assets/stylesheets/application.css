@@ -64,3 +64,21 @@ h1 {
 .actions editing div {
    margin: 0 10px 0 10px ;
 }
+
+/* Flash */
+
+.error, .alert, .info {
+   border-radius: 3px;
+   font-size: 1.2rem;
+   margin-bottom: 5px;
+   margin-top: 36px;
+   color: orange;
+ }
+ 
+ .success, .notice {
+   border-radius: 3px;
+   font-size: 1.2rem;
+   margin-bottom: 5px;
+   margin-top: 36px;
+   color: rgb(134, 226, 134);
+ }
