@@ -4,14 +4,14 @@
 </ul>
 
 <div class="container-flex">
-    <div id="column_1"> <%= image_tag @media.picture, alt: 'picture'%> </div>
+    <div id="column_1"> <%= image_tag @media.picture, alt: 'picture', class: "border rounded" %> </div>
     <div id="column_2">
         <h1> <%=@media.title%> </h1>
         <p> <%=@media.description%> </p>
         <div class="price"><%=@media.price%> € </div>
 
         <% if current_user %>
-        <a href="<%= media_cart_path(@media.id, current_user.cart.id)%>" class="btn-primary" data-method="patch"> Ajouter au panier </a>
+        <a href="<%= media_cart_path(@media.id, current_user.cart.id)%>" class="btn btn-primary btn-lg active" role="button" aria-pressed="true" data-method="patch"> Ajouter au panier </a>
         <% else %>
         <p> Connectez-vous pour acheter cette photo de chat. </p>
         <a href="<%= user_session_path %>" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Me connecter</a>

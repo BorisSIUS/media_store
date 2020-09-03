@@ -13,8 +13,9 @@ class CartsController < ApplicationController
       puts "adding"*30
       @cart.medias << @media
     else
-      puts "destroying"*30
       @cart.medias.delete(@media)
+
+      redirect_to cart_path(@cart.id)
     end
 
   end
