@@ -1,18 +1,27 @@
-<%= form_tag charges_path do %>
-  <article>
-    <% if flash[:error].present? %>
-      <div id="error_explanation">
-        <p><%= flash[:error] %></p>
-      </div>
-    <% end %>
-    <label class="amount">
-      <span><%= @amount%>$</span>
-    </label>
-  </article>
+<div style="width: 100%; height: 50vh; display: flex;">
 
-  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-          data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-          data-description="A month's subscription"
-          data-amount="500"
-          data-locale="auto"></script>
-<% end %>
+
+<div style="margin: auto;">
+
+  <%= form_tag charges_path do %>
+    <article>
+      <% if flash[:error].present? %>
+        <div id="error_explanation">
+          <p><%= flash[:error] %></p>
+        </div>
+      <% end %>
+      <label class="amount">
+        <span><%= @amount%>$</span>
+      </label>
+    </article>
+
+    <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+            data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+            data-description="Votre e-litière pleine de chats digitaux"
+            data-amount="<%= @amount * 100 %>"
+            data-locale="auto"></script>
+  <% end %>
+
+</div>
+
+</div>
