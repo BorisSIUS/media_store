@@ -7,7 +7,7 @@
     <p>Grand maître web, bonjour.</p>
     <p>L'utilisateur <% @user.email%> a passé la commande suivante:</p>
     <% @cart.medias.each do |media| %>
-		<%= image_tag media.picture, alt: 'picture', style: "width: 100%; height: auto;"%>
+      <p><%= media.name%></p>
     <% end %>
     <p>Aurevoire</p>
   </body>
