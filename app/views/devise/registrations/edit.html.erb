@@ -17,7 +17,7 @@
           <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
         <% end %>
 
-        <div class="form-control">
+        <div class="field">
           <%= f.label :password %> <i>(N'ajoutez rien si vous ne souhaitez pas le changer)</i><br />
           <%= f.password_field :password, autocomplete: "nouveau mot de passe" %>
           <% if @minimum_password_length %>
