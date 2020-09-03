@@ -11,3 +11,6 @@
   App.cable = ActionCable.createConsumer();
 
 }).call(this);
+
+Splitting();
+// Hover over the title to pause the CSS animation
