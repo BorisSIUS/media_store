@@ -10,8 +10,11 @@ class CartsController < ApplicationController
     @media = Media.find(params[:media_id])
 
     if params[:id].to_i > 0
-      puts "adding"*30
       @cart.medias << @media
+
+      flash[:success] = "Ton chaton a bien été ajouté au panier."
+
+      redirect_to medias_path
     else
       @cart.medias.delete(@media)
 

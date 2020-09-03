@@ -4,6 +4,16 @@ module ApplicationHelper
           flash[:danger] = "Connectez-vous pour continuer."
           redirect_to new_session_path
         end
+    end
+
+    def bootstrap_class_for_flash(type)
+      case type
+        when 'notice' then "alert-info"
+        when 'success' then "alert-success"
+        when 'error' then "alert-danger"
+        when 'alert' then "alert-warning"
       end
+    end
+
 
 end
