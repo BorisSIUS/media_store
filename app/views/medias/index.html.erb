@@ -1,5 +1,8 @@
-<h1>w a t e r l e m o n | a g e n c y</h1>
-<p>presents you</p>
+<h1> Bienvenue sur w a t e r l e m o n | c a t s ! </h1>
+<h2>Des photos de chats envoyés directement sur votre boite mail</h2>
+<p> Commandez les dès maintenant, le stock est limité! </p>
+<br>
+<hr class="solid">
 
 
 <div style="display: flex; flex-wrap: wrap; justify-content: space-around; align-items: center; margin: 30px;">
@@ -9,16 +12,16 @@
 		<div class="card" style="width: 300px; margin: 15px; padding: 0px;">
 			<div class="card-img-top">
 				<a href="<%= media_path(media.id)%>">
-				<%= image_tag media.picture, alt: 'picture', style: "width: 100%; height: auto; border-top-left-radius: 5px; border-top-right-radius: 5px;"%>
+				<%= image_tag media.picture, alt: 'picture', style: "width: 300px; height: 200px;  border-top-left-radius: 5px; border-top-right-radius: 5px;"%>
 				<!--<img src="<%= media.url %>" style="width: 100%; height: auto; border-top-left-radius: 5px; border-top-right-radius: 5px;">-->
 			</a>
 			</div>
 			<div class="card-footer" style="display: flex; flex-direction: row; justify-content: space-between;">
-				<div >
+				<div id="homepage-cat-name">
 					<%= media.title %>	
 				</div>
 
-				<div>
+				<div id="homepage-price">
 					
 				$	<%= media.price %>
 						
