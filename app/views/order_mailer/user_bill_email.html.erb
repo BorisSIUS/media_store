@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h3>Très chère <%= @user.email%>, bonjour.</h3>
+    <p>Très bonne nouvelle, tu as reçut ta commande de chatons tous chauds</p>
+    <% @cart.medias.each do |media| %>
+			<%= image_tag media.picture, alt: 'picture', style: "width: 100%; height: auto;"%>
+    <% end %>
+    <p>A très bientot sur <%= @url %><p>
+  </body>
+</html>

@@ -1,10 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :charges, only: [:create,:new]
 
-  get 'profilpages/new'
-  get 'profilpages/create'
-
-  
   devise_for :users
 
   root 'medias#index'
