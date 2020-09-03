@@ -14,7 +14,7 @@
   <!-- N A V B A R row-->
 
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary d-flex justify-content-between
-  " style="box-shadow: 0px -2px 65px -14px rgba(0,0,0,0.7);">
+  "style="box-shadow: 0px -2px 42px -15px rgba(0,0,0,0.6);">
 
     <div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center;"><a class="navbar-brand" href="<%= root_path %>">w a t e r l e m o n | c a t s</a>
 
@@ -31,7 +31,7 @@
                 </li>
 
                 <li class="nav-item connected">
-                 <%= link_to "Mon profil", cart_path(current_user.cart.id), style: "color: white;" %>
+                 <%= link_to "Mon profil", member_path(current_user.id), style: "color: white;" %>
                 </li>
 
                   <li class="nav-item connected">

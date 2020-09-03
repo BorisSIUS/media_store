@@ -26,14 +26,10 @@
                     </div></td>
                     <td class="col-md-1 text-center"><strong><%=i.price%></strong></td>
                     <td class="col-md-1">
-                    <button type="button" class="btn btn-danger">
-                        <span class="glyphicon glyphicon-remove"></span> Enlever
-                    </button></td>
+                    <%= link_to "Enlever", media_cart_path(i.id, -1), method: "patch", class: "btn btn-danger" %>
                 </tr>
             <%end%>
-
                 <tr>
-
                     <td>   </td>
                     <td><h5>Sous-total</h5></td>
                     <td class="text-right"><h5>
@@ -59,8 +55,12 @@
                     <td>   </td>
                     <td>   </td>
                     <td>
-                    <button type="button" class="btn btn-success">
-                        <%= link_to 'Place Order', orders_path, method: 'post' %> <span class="glyphicon glyphicon-play"></span>
+
+                    <!--<button type="button" class="btn btn-success">
+                        <= link_to 'Place Order', orders_path, method: 'post' > <span class="glyphicon glyphicon-play"></span> -->
+
+                    <%= link_to 'Commander', new_charge_path, class: "btn btn-success" %> 
+                    
                     </button></td>
                 </tr>
             </tbody>
