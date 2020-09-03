@@ -5,7 +5,7 @@ class OrderMailer < ApplicationMailer
     @cart = user.cart
     @user = user
     @url  = 'https://pastek-media-store.herokuapp.com/' 
-    mail(to: "master@yopmail.com", subject: 'Un utilisateur a passé une commande!') 
+    mail(to: "bobo@yopmail.com", subject: 'Un utilisateur a passé une commande!') 
   end
 
   def user_bill_email(user)
