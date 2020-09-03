@@ -15,8 +15,4 @@ module ApplicationHelper
       end
     end
 
-<<<<<<< HEAD
-
-=======
->>>>>>> master
 end

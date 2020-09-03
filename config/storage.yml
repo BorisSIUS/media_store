@@ -18,17 +18,7 @@ local:
 google:
   service: GCS
   project: pastek-media-store
-  credentials:  
-      type: "service_account"
-      project_id: "pastek-media-store"
-      private_key_id: "bf65a1b5d1c728e0753a6f6f7a1e21ad4603d9a0"
-      private_key: "-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQCm38k3F2brpXIL\nFrIIFREi4SkCsU9xqK2mKp3TQ1p+SPxRwPLaLhCPY0mA1QIlnTxEXVdmySQiQs1R\nMQbRBpodoOxJ6dmp5aa8zF/tfU44nf19HEaKFm1CLxq0bXEKyeD6g68VfeXSKRdH\nkpCROo26OuHz3PjvNseUpZ3yapvb1vapGn0hnmQQBtPkZC/XGjbHmEmKQDmq1h+h\nccXzuDPW0gIt8bHx/DRsMJxtt0eO8DGHMrpd8kGcL72EO0xf9wsjiWpWzuyxYNyi\nGpahLjr0pDjRsL7VA7wSFAW549QJNX+rfK1l54zFIvNLlnUX6d53RNv2B9JvaZtB\nHcxoKlS9AgMBAAECggEAF5cn0ii2BUaehGhJM0DNKx3jBw0rYrE6mTTJmnnZU2R8\nfQ82lbbw4uBhnfue4dPkVvLOHgr913UTovB4GvkgtOMQvFM5kN3VEDghMIjoE7Ns\nCDGE3FUWzYYss4iMND79VdTjXbmuUWM7NgRHeSxqqELWOfwJWgHnvYEbPs+o6G80\n97lAkB+SrUOXfVIQmdQlRyO0uyMZYdPRDKlgG1937U5u24765ywkYkxF/+dbbrY5\nM3QZkD/6kK9k/BTskHpItj0pH8dBI3wkRzHgNIje9abFXWPmxAWxY+cRz+ePYW7D\nBcTbYz+d453hvS7TsI05Vs6ZJNqQ5VMQgJQelUbQeQKBgQDVmR48xUmFoV/sJsAm\n6aqqXhInZqE4+bpTLo0jWcyyAkju/GAzRptVFvVVoUN6+vDOqLRX5Mb09VxYv9Rt\nydRg4WVKtiecKRolVPvMCuV6Z+F4syZ9VvLD8YTzS782ucljGg0Sx7et/hIzlH1S\nl4h1xZXPJk3ZkoN+jfJS201CFQKBgQDIADHZTFYB3gxeUT9R3vh+ppOSo4FBuZC2\nHbwLNu88bQK0bmWcJe4muk+AZ9l+sk4f+ZlRb4gMz6qZBrFOFS7PkwBrnb3mGHwb\nWloAc1B0YfeBdAgl54YDJISpqmsDEFlmOeqIXwjpqjeqQ6+evJCGHS3tyhOvYS+z\nK7kjO2F6CQKBgQCdNscvuZJE3iNJILh7q68nGHhKMdrmocCHqxLM+zKTruTZqj5w\nXz7DYVOQBFMzuHH32eprawMZl2KyG/eSG2TLLfstA2eiJAqPgb6XT0naT42AFnR0\n+sNSf3j4zj7eW96jp7AJq6BBW2kwN9IKMWiKLrT2NF5GjvVj97xtSebShQKBgQC/\nBciW1l0zbWT81LcYuFE5jlpW7YnwP4+jEeVgBLkdSrURpnuwV14OaVazuvy2ERGj\nYp94c4FLUzGK9SR2Aq9yHOKC5ufQlEQ9T9+0nG8UqdlfMHbz1R1fdQqsjpOlGoF4\nrQp/890saKLAIePkRg/3uHj8rEx+7uFDTRiIORgSGQKBgQCZV8onY0hXmQz6px13\nIhw92VDKGj6FLm/NrrDOOd0P1lBsauUuQs6Q/5zCi41DjzzvTtdkr0Zf3Lzypdyy\nMHP65E1x7q5WeWDIwO0Muvt11U5x9Yyr310mlb6Y1+BZJtKC/rJCo56WDqdo9zdq\ntu2aWq/lcnloGCEKZde9bUSyiw==\n-----END PRIVATE KEY-----\n"
-      client_email: "pastek-media-store@pastek-media-store.iam.gserviceaccount.com"
-      client_id: "104340596449471291319"
-      auth_uri: "https://accounts.google.com/o/oauth2/auth"
-      token_uri: "https://oauth2.googleapis.com/token"
-      auth_provider_x509_cert_url: "https://www.googleapis.com/oauth2/v1/certs"
-      client_x509_cert_url: "https://www.googleapis.com/robot/v1/metadata/x509/pastek-media-store%40pastek-media-store.iam.gserviceaccount.co"
+  credentials: <%= ENV['GOOGLE_APPLICATION_CREDENTIALS'] %>
   bucket: pastek-media-store
 
 # Use rails credentials:edit to set the Azure Storage secret (as azure_storage:storage_access_key)
