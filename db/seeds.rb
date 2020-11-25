@@ -9,9 +9,9 @@ cat_pics = Dir.entries("app/assets/images/catpictures")
 
 puts cat_pics
 
-35.times do |x| 
+cat_pics.each do |cat_pic| 
     Media.create(title: Faker::Creature::Cat.breed , description: Faker::Hipster.sentence(word_count: 14), price: Faker::Number.decimal(l_digits: 2))
-    Media.last.picture.attach(io: File.open(Rails.root.join('app', 'assets', 'images', 'catpictures', cat_pic)), filename: cat_pic[x], content_type: 'image/png')
+    Media.last.picture.attach(io: File.open(Rails.root.join('app', 'assets', 'images', 'catpictures', cat_pic)), filename: cat_pic, content_type: 'image/png')
 end
 
 10.times do
