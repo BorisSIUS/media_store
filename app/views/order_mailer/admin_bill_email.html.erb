@@ -7,7 +7,7 @@
     <p>Grand maître web, bonjour.</p>
     <p>L'utilisateur <% @user.email%> a passé la commande suivante:</p>
     <% @cart.medias.each do |media| %>
-      <p><%= media.name%></p>
+      <p><%= media.title%></p>
     <% end %>
     <p>Aurevoire</p>
   </body>
